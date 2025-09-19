@@ -46,3 +46,11 @@ function genPassword() {
 }
 
 generateBtn.addEventListener('click', genPassword);
+
+copyBtn.addEventListener("click", () =>{
+    if(generatedPassword.value === ""){
+        alert("First generate and password!")
+        return;
+    }
+    navigator.clipboard.writeText(generatedPassword.value);
+})
